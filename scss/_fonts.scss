@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Lucida';
+	src: url('fonts/lucida.eot');
+	src: local('☺'), url('fonts/lucida.woff') format('woff'), url('fonts/lucida.ttf') format('truetype'), url('fonts/lucida.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Walsheim';
+	src: url('fonts/walsheim.eot');
+	src: local('☺'), url('fonts/walsheim.woff') format('woff'), url('fonts/walsheim.ttf') format('truetype'), url('fonts/walsheim.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$lucida-font: Lucida, sans-serif;
+$walsheim-font: Walsheim, sans-serif;
