@@ -22,6 +22,24 @@ function menuActive() {
 	wholeHTML.classList.toggle('_lock');
 };
 
+let counter = 0;
+
+const cartCounter = document.querySelector('.header__cart-counter');
+const sidebarItem = document.querySelectorAll('.sidebar-item');
+const buttonRound = document.querySelectorAll('.button__round');
+for (index = 0; index < sidebarItem.length; index++) {
+	sidebarItem[index].addEventListener('click', addToCart);
+};
+for (index = 0; index < buttonRound.length; index++) {
+	buttonRound[index].addEventListener('click', addToCart);
+}
+
+function addToCart(e) {
+	counter++;
+	cartCounter.innerHTML = counter;
+	cartCounter.style.display = 'flex';
+}
+
 const sliderLength = sliderSlides.length;
 var sliderLengthCounter = 1;
 // initial slider position

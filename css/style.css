@@ -297,6 +297,7 @@ html._lock, body._lock {
   }
   .header__form._active {
     display: block;
+    max-width: 300px;
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -309,6 +310,12 @@ html._lock, body._lock {
   border-radius: 24px;
   padding: 0 28px;
   transition: 0.3s;
+}
+
+@media (max-width: 987px) {
+  .header__searchbar {
+    width: 100%;
+  }
 }
 
 .header__searchbar::placeholder {
@@ -326,12 +333,34 @@ html._lock, body._lock {
   height: 32px;
   margin-right: 70px;
   cursor: pointer;
+  position: relative;
+}
+
+.header__cart-counter {
+  position: absolute;
+  top: -30%;
+  right: -50%;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: none;
 }
 
 .header__cart img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 987px) {
+  .header__cart {
+    margin-right: 30px;
+  }
 }
 
 .header__menu {
@@ -584,17 +613,17 @@ html._lock, body._lock {
   font-size: 24px;
 }
 
-.item:hover .item__bottom {
-  color: #fff;
-  background-color: #776FC3;
-}
-
-.item:hover .button__round {
-  background-color: #574A97;
-}
-
-.item:hover .button__round::after, .item:hover .button__round::before {
-  background-color: #fff;
+@media (min-width: 786px) {
+  .item:hover .item__bottom {
+    color: #fff;
+    background-color: #776FC3;
+  }
+  .item:hover .button__round {
+    background-color: #574A97;
+  }
+  .item:hover .button__round::after, .item:hover .button__round::before {
+    background-color: #fff;
+  }
 }
 
 .button__round {
@@ -638,6 +667,7 @@ html._lock, body._lock {
   margin-bottom: 40px;
   transition: 0.3s;
   position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 1210px) {
@@ -661,19 +691,19 @@ html._lock, body._lock {
   }
 }
 
-.sidebar-item:hover {
-  background-color: #776FC3;
-  width: 470px;
-  transform: translateX(-30px);
-}
-
-.sidebar-item:hover .sidebar-item__text {
-  color: #fff;
-}
-
-.sidebar-item:hover .sidebar-item__price {
-  opacity: 1;
-  visibility: visible;
+@media (min-width: 1210px) {
+  .sidebar-item:hover {
+    background-color: #776FC3;
+    width: 470px;
+    transform: translateX(-30px);
+  }
+  .sidebar-item:hover .sidebar-item__text {
+    color: #fff;
+  }
+  .sidebar-item:hover .sidebar-item__price {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .sidebar-item:last-child {
